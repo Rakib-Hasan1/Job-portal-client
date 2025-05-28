@@ -1,12 +1,25 @@
-import React from 'react';
-import Hero from './Hero';
+import React, { Suspense } from "react";
+import Hero from "./Hero";
+import HotJobs from "./HotJobs";
 
 const Home = () => {
-    return (
-        <div>
-            <Hero></Hero>
-        </div>
-    );
+  const jobsPromise = fetch("http://localhost:3000/jobs").then((res) =>
+    res.json()
+  );
+  return (
+    <div>
+      <Suspense
+        fallback={<p className="text-center">jobs are loading......</p>}
+      >
+        <Hero jobsPromise={jobsPromise}></Hero>
+      </Suspense>
+      <Suspense
+        fallback={<p className="text-center">jobs are loading......</p>}
+      >
+        <HotJobs jobsPromise={jobsPromise}></HotJobs>
+      </Suspense>
+    </div>
+  );
 };
 
 export default Home;

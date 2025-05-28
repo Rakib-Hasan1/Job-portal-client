@@ -3,37 +3,74 @@ import React from "react";
 import { motion } from "motion/react";
 import team1 from "../../assets/images/team (1).jpg";
 import team2 from "../../assets/images/team (2).jpg";
+import { IoBagHandleOutline, IoSearch } from "react-icons/io5";
+import { MdOutlineLocationOn } from "react-icons/md";
 
 const Hero = () => {
+  // const jobs = use(jobsPromise);
+  // console.log(jobs);
   return (
-    <div className="hero bg-base-200 min-h-96">
-      <div className="hero-content flex-col lg:flex-row">
+    <div className="hero bg-base-200 rounded-md min-h-96">
+      <div className="hero-content flex-col lg:flex-row md:gap-5">
         <div className="flex-1">
           <motion.h1
             initial={{ scale: 0 }}
             animate={{
               scale: 1,
-              transition: { duration: 2},
+              transition: { duration: 2 },
             }}
             className="text-5xl font-bold"
           >
-            Latest{" "}
+            The
             <motion.span
+              className="px-2"
               animate={{
                 color: ["#ffcf33", "#7bff33", "#33ffcc"],
                 transition: { duration: 2, repeat: Infinity },
               }}
             >
-              jobs
-            </motion.span>{" "}
-            for you!
+              Easiest Way
+            </motion.span>
+            to Get Your New Job
           </motion.h1>
           <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            Each month, more than 3 million job seekers turn to website in their
+            search for work, making over 140,000 applications every single day
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <div className="bg-white flex items-center justify-between p-3 rounded-md">
+            <ul className="menu menu-horizontal px-1">
+              <li>
+                <details>
+                  <summary><IoBagHandleOutline size={20} />Industry</summary>
+                  <ul className="bg-base-100 rounded-t-none p-2">
+                    <li>
+                      <a>Link 1</a>
+                    </li>
+                    <li>
+                      <a>Link 2</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+
+            <ul className="menu menu-horizontal px-1">
+              <li>
+                <details>
+                  <summary><MdOutlineLocationOn size={20} />Location</summary>
+                  <ul className="bg-base-100 rounded-t-none p-2">
+                    <li>
+                      <a>Link 1</a>
+                    </li>
+                    <li>
+                      <a>Link 2</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+            <button className="btn btn-primary"><IoSearch size={20}></IoSearch>Search</button>
+          </div>
         </div>
         <div className="flex-1">
           <motion.img
