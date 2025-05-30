@@ -22,21 +22,29 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink to="/">Find a job</NavLink>
-      </li>
-      {
-        user && <>
-        <li>
-        <NavLink to="/myApplications">My Applications</NavLink>
-      </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to="/myApplications">My Applications</NavLink>
+          </li>
         </>
-      }
+      )}
+
+      {user && (
+        <>
+          <li>
+            <NavLink to="/addJob">Add Job</NavLink>
+          </li>
+          <li>
+            <NavLink to="/myPostedJobs">My Posted Jobs</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -70,7 +78,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <button onClick={handleSignOut} className="btn">Log Out</button>
+          <button onClick={handleSignOut} className="btn">
+            Log Out
+          </button>
         ) : (
           <>
             <NavLink className={"btn"} to="/register">
