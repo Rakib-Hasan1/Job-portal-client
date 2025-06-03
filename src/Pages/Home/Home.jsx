@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import HotJobs from "./HotJobs";
 
 const Home = () => {
-  const jobsPromise = fetch("http://localhost:3000/jobs").then((res) =>
+  const jobsPromise = fetch("https://job-portal-server-hazel-omega.vercel.app/jobs").then((res) =>
     res.json()
   );
   return (

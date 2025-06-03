@@ -1,8 +1,8 @@
 import React, { use } from "react";
 import JobApplicationRow from "./JobApplicationRow";
 
-const ApplicationList = ({ myApplicationPromise }) => {
-  const applications = use(myApplicationPromise);
+const ApplicationList = ({ myApplicationsPromise }) => {
+  const applications = use(myApplicationsPromise);
 
   return (
     <div>
@@ -20,6 +20,7 @@ const ApplicationList = ({ myApplicationPromise }) => {
               </th>
               <th>Company</th>
               <th>Name/Contact</th>
+              <th>Show Details</th>
             </tr>
           </thead>
           <tbody>

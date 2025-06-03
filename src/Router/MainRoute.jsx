@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/jobs/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/jobs/${params.id}`),
+          fetch(`https://job-portal-server-hazel-omega.vercel.app/jobs/${params.id}`),
         Component: JobDetails,
       },
       {
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/applications/:job_id',
-        loader: ({params}) => fetch(`http://localhost:3000/applications/job/${params.job_id}`),
+        loader: ({params}) => fetch(`https://job-portal-server-hazel-omega.vercel.app/applications/job/${params.job_id}`),
         element: <PrivateRoute><ViewApplications></ViewApplications></PrivateRoute>
       },
       {

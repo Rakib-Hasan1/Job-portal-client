@@ -20,12 +20,26 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "btn btn-sm btn-neutral text-lg" : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       {user && (
         <>
           <li>
-            <NavLink to="/myApplications">My Applications</NavLink>
+            <NavLink
+              to="/myApplications"
+              className={({ isActive }) =>
+                isActive ? "btn btn-sm btn-neutral  text-lg" : ""
+              }
+            >
+              My Applications
+            </NavLink>
           </li>
         </>
       )}
@@ -33,10 +47,24 @@ const Navbar = () => {
       {user && (
         <>
           <li>
-            <NavLink to="/addJob">Add Job</NavLink>
+            <NavLink
+              to="/addJob"
+              className={({ isActive }) =>
+                isActive ? "btn btn-sm btn-neutral  text-lg" : ""
+              }
+            >
+              Add Job
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/myPostedJobs">My Posted Jobs</NavLink>
+            <NavLink
+              to="/myPostedJobs"
+              className={({ isActive }) =>
+                isActive ? "btn btn-sm btn-neutral  text-lg" : ""
+              }
+            >
+              My Posted Jobs
+            </NavLink>
           </li>
         </>
       )}

@@ -27,7 +27,7 @@ const JobApply = () => {
     // insert data to db using axios
 
     axios
-      .post("http://localhost:3000/applications", application)
+      .post("https://job-portal-server-hazel-omega.vercel.app/applications", application)
       .then((res) => {
         console.log(res.data);
         if (res.data.insertedId) {
