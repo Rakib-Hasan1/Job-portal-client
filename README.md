@@ -4,6 +4,8 @@ A comprehensive, full-featured job portal designed to bridge the gap between job
 
 🌐 **Live Site:** https://basic-job-portal-659eb.web.app
 
+🌐 **Live Server:** [https://basic-job-portal-659eb.web.app](https://github.com/Rakib-Hasan1/job-portal-server)
+
 ---
 
 ## 🌟 Project Purpose
